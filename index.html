@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adaptive Tutor – Study Scheduler</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>Adaptive Tutor – Personalized Study Scheduler</header>
+
+<div class="container">
+
+    <div class="box">
+        <h2>Add Topic</h2>
+        <input id="topicName" placeholder="Topic Name">
+        <select id="difficulty">
+            <option value="1">Confidence 1</option>
+            <option value="2">Confidence 2</option>
+            <option value="3">Confidence 3</option>
+            <option value="4">Confidence 4</option>
+            <option value="5">Confidence 5</option>
+        </select>
+        <input id="hours" type="number" placeholder="Estimated Hours">
+        <button onclick="addTopic()">Add Topic</button>
+
+        <table id="topicTable">
+            <tr>
+                <th>Topic</th>
+                <th>Confidence</th>
+                <th>Hours</th>
+                <th>Status</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="box">
+        <h2>Weekly Availability</h2>
+        <input id="weeklyHours" type="number" placeholder="Hours per week">
+    </div>
+
+    <div class="box">
+        <h2>Generate Schedule</h2>
+        <button onclick="generateSchedule()">Generate</button>
+        <div id="scheduleOutput"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
